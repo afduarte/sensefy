@@ -30,10 +30,10 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<sensefy.basepath>${project.parent.basedir}/${sensefy.instance.folder}</sensefy.basepath>
-		<manifoldcf.version>1.8</manifoldcf.version>
-		<manifold.artifact.version>1.8.1</manifold.artifact.version>
+		<manifoldcf.version>2.2</manifoldcf.version><!-- Was 1.8-->
+		<manifold.artifact.version>2.2</manifold.artifact.version><!-- Was 1.8.1 -->
 		<tomcat.host>localhost</tomcat.host>
-		<tomcat.port>9099</tomcat.port>
+		<tomcat.port>8080</tomcat.port><!--Was 9099-->
 		<yeoman.maven.plugin.version>0.4</yeoman.maven.plugin.version>
 		<!-- Sensefy server -->
 		<sensefy.server>http://${tomcat.host}:${tomcat.port}</sensefy.server>
@@ -45,11 +45,16 @@
 		<sensefy.searchapi.endpoint>${sensefy.server}/api</sensefy.searchapi.endpoint>
 		<sensefy.instance.folder>sensefy-instance</sensefy.instance.folder>
 		<sensefy.basepath>${project.basedir}/${sensefy.instance.folder}</sensefy.basepath>
+		
 		<!-- Sensefy Solr Home property used as home directory for Solr -->
-		<sensefy.solr.home>${sensefy.basepath}/solr/home</sensefy.solr.home>
-		<!-- Sensefy Solr Lib property used to specify the lib directory used by 
-			Solr -->
-		<sensefy.solr.lib.dir>${sensefy.basepath}/solr/lib</sensefy.solr.lib.dir>
+		
+		<!-- <sensefy.solr.home>${sensefy.basepath}/solr/home</sensefy.solr.home> -->
+			
+
+		<!-- Sensefy Solr Lib property used to specify the lib directory used by Solr -->
+
+		<!-- <sensefy.solr.lib.dir>${sensefy.basepath}/solr/lib</sensefy.solr.lib.dir> -->
+
 		<sensefy.config.home>${project.basedir}/config</sensefy.config.home>
 		<sensefy.auth.server.config>${sensefy.config.home}/sensefy-auth-conf/</sensefy.auth.server.config>
 		<sensefy.solr.default.conf>${sensefy.config.home}/solr-default-conf</sensefy.solr.default.conf>
@@ -57,8 +62,6 @@
 		<sensefy.ui.server.conf>${sensefy.config.home}/sensefy-ui-conf/</sensefy.ui.server.conf>
 		<sensefy.version>2.0.2-SNAPSHOT</sensefy.version>
 		<sensefy.api.server.conf>${sensefy.config.home}/sensefy-api/</sensefy.api.server.conf>
-
-
 
 		<spring.config.location>file:${sensefy.basepath}/configuration/application.properties</spring.config.location>
 		<sensefy.conf.dir>${sensefy.basepath}/configuration</sensefy.conf.dir>
@@ -673,7 +676,7 @@
 					<plugin>
 						<groupId>org.apache.tomcat.maven</groupId>
 						<artifactId>tomcat7-maven-plugin</artifactId>
-						<version>2.3-SNAPSHOT</version>
+						<version>2.2</version><!-- Was 2.3-SNAPSHOT -->
 						<configuration>
 							<enableNaming>false</enableNaming>
 							<finalName>sensefy-${project.version}.jar</finalName>
@@ -713,7 +716,7 @@
 					<plugin>
 						<groupId>org.apache.tomcat.maven</groupId>
 						<artifactId>tomcat7-maven-plugin</artifactId>
-						<version>2.3-SNAPSHOT</version>
+						<version>2.2</version><!-- Was 2.3-SNAPSHOT -->
 						<executions>
 							<execution>
 								<id>tomcat-run</id>
@@ -838,4 +841,18 @@
 			</snapshots>
 		</repository>
 	</repositories>
+	<pluginRepositories>
+		<!-- Add Plugin repository for apache maven plugin snapshot-->
+		<!--<pluginRepository>
+  			<id>apache.snapshots</id>
+  			<name>Apache Snapshots</name>
+  			<url>https://repository.apache.org/content/repositories/snapshots</url>
+  			<releases>
+    			<enabled>false</enabled>
+  			</releases>
+		  	<snapshots>
+    			<enabled>true</enabled>
+  			</snapshots>
+		</pluginRepository>-->
+	</pluginRepositories>
 </project>
