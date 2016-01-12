@@ -26,6 +26,16 @@
 	<name>Sensefy Parent Pom</name>
 
 
+	<!-- <properties>
+
+		Sensefy Solr Home property used as home directory for Solr
+		<sensefy.solr.home>/opt/solr/server/solr</sensefy.solr.home>
+
+		Sensefy Solr Lib property used to specify the lib directory used by Solr
+		<sensefy.solr.lib.dir>${sensefy.solr.home}/lib</sensefy.solr.lib.dir>
+	</properties> -->
+
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
