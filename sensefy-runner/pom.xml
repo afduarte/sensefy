@@ -676,7 +676,7 @@
 					<plugin>
 						<groupId>org.apache.tomcat.maven</groupId>
 						<artifactId>tomcat7-maven-plugin</artifactId>
-						<version>2.2</version><!-- Was 2.3-SNAPSHOT -->
+						<version>2.3-SNAPSHOT</version>
 						<configuration>
 							<enableNaming>false</enableNaming>
 							<finalName>sensefy-${project.version}.jar</finalName>
@@ -716,7 +716,7 @@
 					<plugin>
 						<groupId>org.apache.tomcat.maven</groupId>
 						<artifactId>tomcat7-maven-plugin</artifactId>
-						<version>2.2</version><!-- Was 2.3-SNAPSHOT -->
+						<version>2.3-SNAPSHOT</version>
 						<executions>
 							<execution>
 								<id>tomcat-run</id>
