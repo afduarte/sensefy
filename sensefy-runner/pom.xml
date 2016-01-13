@@ -30,10 +30,10 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<sensefy.basepath>${project.parent.basedir}/${sensefy.instance.folder}</sensefy.basepath>
-		<manifoldcf.version>2.2</manifoldcf.version><!-- Was 1.8-->
-		<manifold.artifact.version>2.2</manifold.artifact.version><!-- Was 1.8.1 -->
+		<manifoldcf.version>2.3</manifoldcf.version><!-- Was 1.8-->
+		<manifold.artifact.version>2.3</manifold.artifact.version><!-- Was 1.8.1 -->
 		<tomcat.host>localhost</tomcat.host>
-		<tomcat.port>8080</tomcat.port><!--Was 9099-->
+		<tomcat.port>9099</tomcat.port>
 		<yeoman.maven.plugin.version>0.4</yeoman.maven.plugin.version>
 		<!-- Sensefy server -->
 		<sensefy.server>http://${tomcat.host}:${tomcat.port}</sensefy.server>
